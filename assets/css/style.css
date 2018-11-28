@@ -71,8 +71,8 @@ img {
 .showcase {
   grid-area: showcase;
   min-height: 400px;
-  background: url(https://image.ibb.co/kYJK8x/showcase.jpg);
-  background-size: contain no-repeat;
+  background: url(/assets/img/Laptop.jpeg);
+  background-size: cover;
   background-position: center;
   padding:3rem;
   display: flex;
