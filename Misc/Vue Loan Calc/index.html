@@ -46,16 +46,16 @@
                 <input type="number" id="interest" class="form-control" placeholder="Interest" v-model="interest">
               </div>
             </div>
-            <!-- Repayment Years -->
+            <!-- Repayment months -->
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-text inputs"><i class="fas fa-clock fa-sm"></i></span>
-                <input type="number" id="years" class="form-control" placeholder="Years To Repay" v-model="years">
+                <input type="number" id="months" class="form-control" placeholder="Months To Repay" v-model="months">
               </div>
             </div>
-            <div class="form-group">
+            <!-- <div class="form-group">
               <input type="submit" v-on:submit.prevent="showResults" value="Calculate" class="btn btn-dark btn-block">
-            </div>
+            </div> -->
           </form>
           
           
@@ -96,7 +96,7 @@
     data: {
       principal: null,
       interest: null,
-      years: null,
+      months: null,
       calculated: false,
       monthlyPayment: null,
       totalPayment: null,
@@ -111,11 +111,10 @@
         this.interest = parseFloat(this.interest);
         this.term = parseFloat(this.term);
         let calculatedInterest = this.interest / 100 / 12;
-        let calculatedPayments = this.years * 12;
           
-        let x = Math.pow(1 + (calculatedInterest), calculatedPayments);
+        let x = Math.pow(1 + (calculatedInterest), this.months);
         monthlyPayment=((this.principal * x * calculatedInterest) / (x - 1)).toFixed(2);
-        totalPayment = (monthlyPayment*calculatedPayments).toFixed(2);
+        totalPayment = (monthlyPayment*this.months).toFixed(2);
         totalInterest = (totalPayment-this.principal).toFixed(2);
       },
 
