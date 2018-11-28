@@ -5,13 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
     crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/calcStyle.css">
+  <link rel="stylesheet" href="./assets/calcStyle.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122079847-1');
+</script>
+
   <title>Basic Loan Calculator</title>
-<style>
-  .inputs {
+  <style>
+    .inputs {
   width:35px;
 }
 #results {
@@ -24,11 +35,11 @@
 
 <body class="bg-dark">
   <div class="container">
-      <div class="row">
-        <div class="col-md-9 mx-auto">
-          <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Basic Loan Calculator</h1>
-            <form id="loan-form">
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Basic Loan Calculator</h1>
+          <form id="loan-form">
             <!-- Principle -->
             <div class="form-group">
               <!--In bootstrap want inputs and labels wrapped in form group -->
@@ -55,40 +66,40 @@
               <input type="submit" value="Calculate" class="btn btn-dark btn-block">
             </div>
           </form>
-            <!-- LOADER -->
-            <!--
+          <!-- LOADER -->
+          <!--
             <div id="loading">
               <img src="img/loading.gif" alt="">
             </div>
             -->
-            <!-- RESULTS -->
-            <div id="results" class="pt-4">
-              <h5>Results</h5>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Monthly Payment</span>
-                  <input type="number" class="form-control" id="monthly-payment" disabled>
-                </div>
+          <!-- RESULTS -->
+          <div id="results" class="pt-4">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Monthly Payment</span>
+                <input type="number" class="form-control" id="monthly-payment" disabled>
               </div>
+            </div>
 
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Total Payment</span>
-                  <input type="number" class="form-control" id="total-payment" disabled>
-                </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Total Payment</span>
+                <input type="number" class="form-control" id="total-payment" disabled>
               </div>
+            </div>
 
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Total Interest</span>
-                  <input type="number" class="form-control" id="total-interest" disabled>
-                </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Total Interest</span>
+                <input type="number" class="form-control" id="total-interest" disabled>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

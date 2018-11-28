@@ -7,9 +7,19 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-122079847-1');
+</script>
+
   <title>Car Payment Calculator</title>
-<style>
-  .inputs {
+  <style>
+    .inputs {
   width:35px;
 }
 #results {
@@ -22,22 +32,22 @@
 
 <body class="bg-dark">
   <div class="container">
-      <div class="row">
-        <div class="col-md-9 mx-auto">
-          <div class="card card-body text-center mt-5">
-            <h1 class="heading display-5 pb-3">Car Payment Calculator</h1>
-            
-            
-            <form id="loan-form">
+    <div class="row">
+      <div class="col-md-9 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Car Payment Calculator</h1>
 
-              <!-- Car Price -->
+
+          <form id="loan-form">
+
+            <!-- Car Price -->
             <div class="form-group">
               <div class="input-group">
                 <span class="input-group-text inputs"><i class="fas fa-dollar-sign"></i></span>
                 <input type="text" id="price" class="form-control" placeholder="Price of Car">
               </div>
             </div>
-            
+
             <!-- Down Payment -->
             <div class="form-group">
               <div class="input-group">
@@ -45,7 +55,7 @@
                 <input type="text" id="dp" class="form-control" placeholder="Down Payment">
               </div>
             </div>
-            
+
             <!-- Interest -->
             <div class="form-group">
               <div class="input-group">
@@ -53,7 +63,7 @@
                 <input type="text" id="interest" class="form-control" placeholder="Interest">
               </div>
             </div>
-            
+
             <!-- Repayment Months -->
             <div class="form-group">
               <div class="input-group">
@@ -69,52 +79,52 @@
                 <input type="text" id="tax" class="form-control" placeholder="Sales Tax">
               </div>
             </div>
-            
+
             <!-- Submit Button -->
             <div class="form-group">
               <input type="submit" value="Calculate" class="btn btn-dark btn-block">
             </div>
           </form>
 
-            <!-- LOADER (Optional) -->
-            <!--
+          <!-- LOADER (Optional) -->
+          <!--
             <div id="loading">
               <img src="img/loading.gif" alt="">
             </div>
             -->
 
-            <!-- RESULTS -->
-            <div id="results" class="pt-4">
-              <h5>Results</h5>
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Monthly Payment</span>
-                  <input type="number" class="form-control" id="monthly-payment" disabled>
-                </div>
+          <!-- RESULTS -->
+          <div id="results" class="pt-4">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Monthly Payment</span>
+                <input type="number" class="form-control" id="monthly-payment" disabled>
               </div>
+            </div>
 
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Total Payment</span>
-                  <input type="number" class="form-control" id="total-payment" disabled>
-                </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Total Payment</span>
+                <input type="number" class="form-control" id="total-payment" disabled>
               </div>
+            </div>
 
-              <div class="form-group">
-                <div class="input-group">
-                  <span class="input-group-text">Total Interest</span>
-                  <input type="number" class="form-control" id="total-interest" disabled>
-                </div>
+            <div class="form-group">
+              <div class="input-group">
+                <span class="input-group-text">Total Interest</span>
+                <input type="number" class="form-control" id="total-interest" disabled>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" ></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="./carLoan.js"></script>
 </body>
