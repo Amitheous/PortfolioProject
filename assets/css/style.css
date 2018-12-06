@@ -11,6 +11,10 @@
   color: lightcoral;
 }
 
+span {
+  color: lightcoral;
+}
+
 .nav-link:hover {
   color: aqua;
   transition-duration: 500ms;
