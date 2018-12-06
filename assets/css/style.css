@@ -1,328 +1,96 @@
-:root {
-  --primary: #ddd;
-  --dark: #333;
-  --light: #fff;
-  --shadow: 0 1px 5px rgba(104,104,104, 0.8);
-  --btn-bg: rgb(160,160,160);
+.navbar {
+  background-color: rgba(52, 144, 236, 0.4);
+  color: white;
 }
 
-html {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--dark);
+.navbar-brand {
+  color: lightcoral;
 }
-
-body {
-  background: #ccc;
-  margin: 30px 50px;
-  line-height: 1.4;
-}
-
-.btn {
-  background: var(--dark);
-  color: var(--light);
-  padding: 0.6rem 1.3rem;
+.nav-link {
   text-decoration: none;
-  border: 0;
+  color: lightcoral;
 }
 
-img {
-  max-width: 100%;
-}
-
-.wrapper {
-  display: grid;
-  grid-gap: 1rem;
-}
-
-.top-nav ul {
-  display:grid;
-  grid-gap: 1rem;
-  padding:0;
-  list-style: none;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.top-nav a {
-  background: var(--primary);
-  display:block;
-  text-decoration: none;
-  padding: 1rem;
-  text-align: center;
-  color: var(--dark);
-  box-shadow: var(--shadow);
-  font-weight: bold;
-}
-
-.top-nav a:hover{
-  background: var(--dark);
-  color: var(--primary);
-  transition: 300ms;
-}
-
-.top-container {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-areas:
-    'showcase showcase top-box-a'
-    'showcase showcase top-box-b'
-}
-
-.showcase {
-  grid-area: showcase;
-  min-height: 400px;
-  background: url(/assets/img/Laptop.jpeg);
-  background-size: cover;
-  background-position: center;
-  padding:3rem;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  box-shadow: var(--shadow);
-}
-
-.showcase h1 {
-  color: var(--light);
-  font-size: 3rem;
-  margin-bottom: 0; 
-}
-
-.showcase p {
-  color: var(--light);
-  margin-top: 0;
-  font-size: 1.3rem;
+.nav-link:hover {
+  color: aqua;
+  transition-duration: 500ms;
+  text-shadow: 1px 1px rgba(238, 255, 0, 0.719);
 }
 
 .top-box {
-  background: var(--primary);
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  box-shadow: var(--shadow);
-  padding: 1rem;
-  width: 20vw;
-  margin-right: 0;
-
+  height: 100vh;
+  background: url(/assets/img/sunset.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right;
 }
 
-.top-box .btn:hover {
-  background: var(--btn-bg);
-  color: var(--dark);
-  transition: 400ms;
-}
-
-.showcase .btn:hover{
-  background: var(--btn-bg);
-  color: var(--dark);
-  transition: 400ms;
-}
-
-.top-box .price {
-  font-size: 2rem;
-}
-
-.top-box-a {
-  grid-area: top-box-a;
-}
-
-.top-box-b {
-  grid-area: top-box-b;
-}
-
-.projectsHeader {
-  margin: 0 auto;
-  text-decoration-line: underline;
-}
 .projects {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(4, 1fr);
-  left: 0;
+  background-color: rgba(139, 139, 139, .5)
+}
+.top-box-text {
+  padding-top: 40vh;
+  color: white;
 }
 
-.box {
-  background: var(--primary);
-  text-align: center;
-  padding: 1rem;
-  box-shadow: var(--shadow);
+.card {
+  height: 100%;
 }
-.projectBox {
-  background: var(--primary);
-  display: block;
+.card {
+  min-width: 220px !important;
+}
+
+.card a{
   text-decoration: none;
-  text-align: center;
-  color: var(--dark);
-  font-weight: bold;
-  margin-bottom: auto;
-  padding: 1rem;
-  box-shadow: var(--shadow);
+  color: black;
 }
-.projectBox:hover {
-  background: var(--dark);
-  color: var(--primary);
-  transition: 300ms;
-}
-
-.referencesHeader {
-  margin: 0 auto;
-  text-decoration-line: underline;
-}
-
-.referenceBox{
-  background: var(--primary);
+.card a:hover {
+  color: aqua !important;
   text-decoration: none;
-  text-align: center;
-  color: var(--dark);
-  font-weight: bold;
-  padding: 1rem;
-  box-shadow: var(--shadow);
-  margin-bottom: 5px;
-}
-.referenceBox h2 {
-  align-items: center;
-}
-.cf {
-  height: 48px;
-  width: 100%;
-  background-color: var(--light);
-  color: var(--dark);
-  margin-bottom: 1px;
-}
-.cf ul {
-  padding: 0;
-  margin: 0;
-}
-.cf li {
-  display: inline;
-  float: left;
-}
-.cf a {
-  display: inline-block;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  padding: 10px 0;
-  color: var(--light);
-  text-decoration: none;
-}
-.cf li:hover {
-  background-color: #444;
-}
-.cf a#openup {
-  display: none;
+  transition-duration: 500ms !important;
+  text-shadow: 1px 1px  rgba(238, 255, 0, 0.719);
 }
 
-@media screen and (max-width: 700px) {
-  h1 {
-    font-size: 2.8em;
-  }
-
-  .cf {
-    height: auto;
-    border-bottom: 0;
-  }
-  .cf ul {
-    display: none;
-    height: auto;
-  }
-  .cf li {
-    width: 100%;
-    float: left;
-    position: relative;
-  }
-  .cf a {
-    text-align: left;
-    width: 100%;
-    text-indent: 25px;
-    background: #333;
-    border-bottom: 1px solid #555;
-  }
-  .cf a:hover {
-    background: #444;
-  }
-  .cf a#openup:after {
-    content: "|||";
-    transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-90deg);
-    /* Safari and Chrome */
-    width: 30px;
-    height: 30px;
-    display: inline-block;
-    position: absolute;
-    right: 5px;
-    top: 20px;
-  }
-  .cf a#openup {
-    display: block;
-    background-color: #333;
-    width: 100%;
-    position: relative;
-  }
-
-  .top-nav{
-    display: none;
-  }
-
-}
-.cf:before, .cf:after {
-  content: "";
-  display: table;
+.contact {
+  background-color: #343a40e8;
 }
 
-.cf:after {
-  clear: both;
+
+#name, #email, #message{
+  min-width: 30vw;
+  padding-left: 4px;
 }
 
-.cf {
-  zoom: 1;
+#message {
+  min-height: 200px;
 }
 
-@media(min-width: 700px) {
-  .referencesHeader, .references, .cf{
-    display: none;
+#form-card {
+  background-color:transparent;
+  border: 2px solid black
+}
+
+@media(max-width: 992px) {
+  .card-group {
+    display: inline !important;
+  }
+  .card-group .card {
+    margin: 5px auto !important;
+  }
+  #message {
+    min-height: 150px;
+  }
+
+  #name, #email, #message {
+    width: 90%;
   }
 }
 
-@media(max-width: 700px) {
-  .top-box-a,.top-box-b{
-    display: none;
+@media(max-width: 1200px) {
+  .card-group {
+    display: block !important;
   }
-
-  .projectsHeader {
-    display: inline;
-    padding-top: 25rem;
-  }
-  .projects{
-    display: inline;
-    position: relative;
-  }
-
-  nav {
-    margin-right: 0;
-    width: 100vh;
-  }
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  :root{
-    margin:0;
-  }
-
-  .referencesHeader {
-    display:'inline';
-  }
-
-  .top-container {
-    padding: none;
-    margin: none;
-  }
-
-  .showcase {
-    padding: 1rem;
-    position: absolute;
+  .card-group .card {
+    margin: 20px auto !important;
   }
 }
