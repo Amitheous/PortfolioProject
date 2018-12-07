@@ -1,25 +1,32 @@
+:root{
+  --my-yellow: rgb(243, 173, 21);
+}
+
 
 .navbar {
-  background-color: rgba(52, 144, 236, 0.4);
+  background-color: rgba(24, 18, 30, 0.479);
   color: white;
 }
 
 .navbar-brand {
-  color: lightcoral;
+  color: var(--my-yellow);
+  font-weight: 600;
 }
 .nav-link {
+  font-size: 1.2rem;
+  font-weight: 500;
   text-decoration: none;
-  color: lightcoral;
+  color: var(--my-yellow)
 }
 
 span {
-  color: lightcoral;
+  color: var(--my-yellow);
 }
 
 .nav-link:hover {
-  color: aqua;
-  transition-duration: 500ms;
-  text-shadow: 1px 1px rgba(238, 255, 0, 0.719);
+  color: #EFEFEF;
+  transition-duration: 400ms;
+  text-shadow: 2px 2px #A9A9A9;
 }
 
 .top-box {
@@ -31,7 +38,12 @@ span {
 }
 
 .projects {
-  background-color: rgba(139, 139, 139, .5)
+  background-color: rgba(139, 139, 139, .5);
+  color: #233237
+}
+
+#project-box{
+  background-color: #233237;
 }
 .top-box-text {
   padding-top: 40vh;
@@ -56,8 +68,20 @@ span {
   text-shadow: 1px 1px  rgba(238, 255, 0, 0.719);
 }
 
-.contact {
-  background-color: #343a40e8;
+#contact {
+  background-color: #18121E;
+}
+
+#contact h2 {
+  color: var(--my-yellow);
+}
+
+i {
+  color: white;
+}
+i:hover {
+  color: var(--my-yellow);
+  transition-duration: 400ms;
 }
 
 
@@ -72,7 +96,17 @@ span {
 
 #form-card {
   background-color:transparent;
-  border: 2px solid black
+  border: 2px solid black;
+}
+
+#form-submit{
+  background-color: var(--my-yellow);
+  color: #233237;
+}
+#form-submit:hover{
+  background-color: rgb(255, 174, 0);
+  border: 1px solid #18121E;
+  transition-duration: 200ms;
 }
 
 @media(max-width: 992px) {

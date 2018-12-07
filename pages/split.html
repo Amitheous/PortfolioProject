@@ -1,36 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- ICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+  <link rel="manifest" href="/assets/manifest.json">
+  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico">
+  <link rel="stylesheet" href="/pages/split/assets/splitstyle.css">
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-122079847-1');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122079847-1');
+  </script>
 
   <title>Techtimeless | Split</title>
-  <link rel="stylesheet" href="/pages/split/assets/splitstyle.css">
-</head></html>
+  
+</head>
+
+</html>
+
 <body>
   <div class="container">
     <div class="split left">
       <h1 id="left-title">Parallax</h1>
-      <a href="/pages/parallax/parallax.html" class="button">Preview</a>
+      <a href="/pages/parallax.html" class="button">Preview</a>
     </div>
     <div class="split right">
-      <h1 id="right-title">Grid</h1>
-      <a href="../../index.html" class="button">Preview</a>
+      <h1 id="right-title">Home Page</h1>
+      <a href="/index.html" class="button">Visit</a>
     </div>
   </div>
 
   <script src="/pages/split/assets/splitscript.js"></script>
 </body>
+
 </html>

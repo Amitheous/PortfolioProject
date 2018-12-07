@@ -25,7 +25,6 @@
   <link rel="shortcut icon" href="/assets/icons/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/assets/icons/browserconfig.xml">
-  <meta name="theme-color" content="#ffffff">
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -50,7 +49,7 @@
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon py-1">Menu</span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse text-uppercase" id="navbarNav">
         <ul class="navbar-nav ml-auto mr-3">
           <li class="nav-item px-4">
             <a class="nav-link" href="#top-box">Home</a>
@@ -75,10 +74,10 @@
 
     <!-- Projects -->
     <section class="projects pb-5" id="projects">
-      <header class="text-center pt-5 mb-5 pb-3 text-uppercase small">
+      <header class="text-center pt-5 mb-1 pb-3 text-uppercase small">
         <h2>My Projects</h2>
       </header>
-      <div class="card bg-dark mx-5 px-5 py-5" data-aos="fade-up" data-aos-duration="1000">
+      <div class="card mx-5 px-5 py-5" data-aos="fade-up" data-aos-duration="1000" id="project-box">
         <div class="card-group">
 
           <div class="card mr-4">
@@ -126,7 +125,7 @@
           <div class="form-group">
             <textarea name="Message" id="message" placeholder="Your Message"></textarea>
           </div>
-          <button class="btn" type="submit">Submit</button>
+          <button class="btn" type="submit" id="form-submit">Submit</button>
         </form>
       </div>
       <div class="text-center pt-5 mt-5 pb-5 mb-4" id="bottom-text" data-aos="fade-down">

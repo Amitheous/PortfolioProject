@@ -14,9 +14,10 @@ html {
 
 body {
   background: #ccc;
-  margin: 30px 50px;
+  margin: 30px 40px;
   line-height: 1.4;
 }
+
 
 .btn {
   background: var(--dark);
@@ -63,6 +64,7 @@ img {
 .top-container {
   display: grid;
   grid-gap: 1rem;
+  width: auto;
   grid-template-areas:
     'showcase showcase top-box-a'
     'showcase showcase top-box-b'
@@ -82,13 +84,20 @@ img {
   box-shadow: var(--shadow);
 }
 
-.showcase h1 {
+#showcase-content{
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 14px;
+  border-radius: 5px 5px;
+}
+
+#showcase-content h1 {
   color: var(--light);
   font-size: 3rem;
+  margin-top: 10px;
   margin-bottom: 0; 
 }
 
-.showcase p {
+#showcase-content p {
   color: var(--light);
   margin-top: 0;
   font-size: 1.3rem;
@@ -103,6 +112,7 @@ img {
   padding: 1rem;
   width: 20vw;
   margin-right: 0;
+  margin-left:auto;
 
 }
 
@@ -157,6 +167,7 @@ img {
   margin-bottom: auto;
   padding: 1rem;
   box-shadow: var(--shadow);
+  min-height: 199px;
 }
 .projectBox:hover {
   background: var(--dark);
@@ -213,7 +224,7 @@ img {
   display: none;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 2.8em;
   }
@@ -280,20 +291,19 @@ img {
   zoom: 1;
 }
 
-@media(min-width: 700px) {
+@media(min-width: 768px) {
   .referencesHeader, .references, .cf{
     display: none;
   }
 }
 
-@media(max-width: 700px) {
+@media(max-width: 768px) {
   .top-box-a,.top-box-b{
     display: none;
   }
 
   .projectsHeader {
     display: inline;
-    padding-top: 25rem;
   }
   .projects{
     display: inline;
@@ -319,10 +329,22 @@ img {
   .top-container {
     padding: none;
     margin: none;
+    display: inline;
   }
 
   .showcase {
-    padding: 1rem;
-    position: absolute;
+    position: relative;
+    display: flex;
+  }
+}
+
+@media(min-width: 1600px) {
+  .showcase {
+    min-width: 65vw;
+  }
+}
+@media(max-width: 1599px) and (min-width:1230px){
+  .showcase{
+    min-width: 60vw;
   }
 }

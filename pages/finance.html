@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link rel="stylesheet" href="/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"">
+  <link rel="stylesheet" href="/pages/financeTools/css/finance.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- ICONS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
+  <link rel="icon" sizes="192x192" href="/assets/icons/android-chrome-192x192.png">
+  <link rel="manifest" href="/assets/manifest.json">
+  <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/assets/icons/favicon.ico">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
@@ -19,156 +29,94 @@
 
   <title>Financial Tools</title>
 
-  <style>
-
-  :root{
-    --main:rgba(255, 115, 0, 0.774);
-    --main-dark:rgba(255, 115, 0, 1);
-    --light-text: #f4f4f4;
-  }
-  body {
-    background-color: var(--light-text);
-    font-family: 'Montserrat', arial, serif;
-  }
-  #topNav {
-    background: var(--main);
-  }
-  span h1{
-    color: var(--light-text);
-  }
-  .nav-link{
-    font-size: 2rem !important;
-    color:var(--light-text) !important;
-  }
-
-  .nav-link:hover{
-    text-shadow: 0 3px rgba(0, 0, 0, 0.459);
-  }
-
-  .btn-primary {
-    border-color: var(--main);
-    background-color: var(--main);
-    color: var(--light-text);
-  }
-
-  .btn-primary:hover {
-    background-color: var(--main-dark);
-    border-color: var(--light-text);
-  }
-
-  .btn-primary.disabled{
-    background-color: var(--main);
-    border-color: white;
-  }
-
-
-  .card {
-    margin-bottom: 20px;
-  }
-    
-  @media (max-width: 424px) {
-    span h1 {
-      font-size: 2rem;
-    }
-  }
-  @media (max-width: 768px) {
-    .row {
-      display: inline;
-    }
-  }
-
-  @media (min-width: 992px){
-  li a{
-    margin-left:2vw;
-    }
-  nav div {
-    position: absolute;
-    right: 10vw;
-  }
-  }
-  @media (max-width:991px) {
-    nav div {
-      text-align: right;
-    }
-  }
-  </style>
 </head>
+
 <body>
 
-  <div id = "topNav" class="container-fluid">
-    <nav  class="navbar navbar-expand-lg navbar-light">
-      <span class="navbar mb-0 h5 ml-0 pl-0"><h1>Finance Tools</h1></span>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+  <div id="topNav" class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <span class="navbar mb-0 ml-0 pl-0">
+        <h2>Finance Tools</h2>
+      </span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" href="../../index.html">Home</a>
+            <a class="nav-link" href="/index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../parallax/parallax.html">Parallax</a>
+            <a class="nav-link" href="/pages/parallax.html">Parallax</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../split/split.html">Split Landing</a>
+            <a class="nav-link" href="/pages/split.html">Split Landing</a>
           </li>
-          
+
         </ul>
       </div>
     </nav>
-</div>
-  
-  
-  <div class="container mt-4">
-    <div class="row">
-      <div class="col">
-        <div class="card text-center">
-          <div class="card-header text-center"><i class="fas fa-percentage fa-4x"></i></div>
-            <div class="card-body">
-              <h5 class="card-title">Basic Loan Calculator</h5>
-              <p class="card-text">A tool to calculate the monthly payment and total interest of a loan</p>
-              <a href="./loanCalc/loanCalc.html" class="btn btn-primary">Try it out</a>
-            </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card text-center">
-          <div class="card-header text-center"><i class="fas fa-car fa-4x"></i></div>
-            <div class="card-body">
-              <h5 class="card-title">Car Loan Calculator</h5>
-              <p class="card-text">Tool for finding the total cost and monthly payments when buying a car</p>
-              <a href="./carLoan/carLoan.html" class="btn btn-primary">Try it out</a>
-            </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card text-center">
-          <div class="card-header text-center"><i class="fas fa-question fa-4x"></i></div>
-            <div class="card-body">
-              <h5 class="card-title">Coming Soon</h5>
-              <p class="card-text">Coming Soon</p>
-              <a href="./carLoan/carLoan.html" class="btn btn-primary disabled" disabled>Try it out</a>
-            </div>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card text-center">
-          <div class="card-header text-center"><i class="fas fa-question fa-4x"></i></div>
-            <div class="card-body">
-              <h5 class="card-title">Coming Soon</h5>
-              <p class="card-text">Coming Soon</p>
-              <a href="./carLoan/carLoan.html" class="btn btn-primary disabled" disabled>Try it out</a>
-            </div>
-        </div>
-      </div>
-    </div>
-    
   </div>
 
 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md col-sm-12  mx-auto">
+        <div class="card text-center">
+          <div class="card-header text-center"><i class="fas fa-percentage fa-4x"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Basic Loan Calculator</h5>
+            <p class="card-text">A tool to calculate the monthly payment and total interest of a loan</p>
+
+            <a href="/pages/financeTools/loanCalc/loanCalc.html" class="btn btn-primary">Try it out</a>
+
+          </div>
+        </div>
+      </div>
+      <div class=" col-sm-12 col-md mx-auto">
+        <div class="card text-center">
+          <div class="card-header text-center"><i class="fas fa-car fa-4x"></i></div>
+          <div class="card-body">
+            <h5 class="card-title">Car Loan Calculator</h5>
+            <p class="card-text">Tool for finding the total cost and monthly payments when buying a car</p>
+            <a href="/pages/financeTools/carLoan/carLoan.html" class="btn btn-primary">Try it out</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5 text-center">
+      <div class="card pb-4mx-auto" id="suggestion-form">
+        <form name="Finance Tools Suggestions" netlify>
+          <div class="card-header mb-3 pt-4">
+            <h4>Suggestions</h4>
+          </div>
+          <p>If you have any calculators you would like to see, let me know!</p>
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <input type="text" name="name" id="name" placeholder="Name">
+          </div>
+          <div class="form-group">
+            <textarea name="Suggestion" id="suggestion" placeholder="Your Message" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="text-center text-uppercase small py-3 text-light" id="footer">Matthew Kartchner &copy;2018</footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="/assets/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

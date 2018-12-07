@@ -1,0 +1,121 @@
+  :root{
+    --main:#6D7993;
+    --secondary:#D5D5D5;
+    --third: #f4f4f4;
+    --fourth: #9099A2;
+  }
+  body {
+    background-color: var(--secondary);
+    font-family: 'Montserrat', arial, serif;
+  }
+
+  
+  #topNav {
+    background: var(--main);
+    height: auto;
+  }
+  span h2{
+    color: var(--secondary);
+  }
+  .nav-link{
+    font-size: 1.7rem !important;
+    color:var(--secondary) !important;
+  }
+
+  .nav-link:hover{
+    text-shadow: 0 3px rgba(0, 0, 0, 0.459);
+  }
+
+  .card-header {
+    background-color: var(--main);
+    color: var(--third);
+  }
+
+  .card-body {
+    background-color: var(--third);
+    color: var(--main);
+  }
+
+  .btn-primary {
+    border-color: var(--main);
+    background-color: var(--main);
+    color: var(--third);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--third);
+    border-color: var(--main);
+    color: var(--main);
+  }
+
+
+  #suggestion-form{
+    background-color: var(--third);
+    color: var(--main);
+    width: 50%;
+    margin: 40px auto;
+    padding-bottom: 1rem;
+  }
+  #footer {
+    width: 100%;
+    bottom:0 !important;
+    color: var(--main) !important;
+    margin-top: 3rem;
+    
+  }
+
+  input, textarea{
+    min-width: 300px;
+  }
+    
+  @media (max-width: 424px) {
+    span h2 {
+      font-size: 2rem;
+    }
+  }
+  @media (max-width: 768px) {
+    
+    .row {
+      display: inline;
+    }
+    
+    .card {
+      width: 100%;
+      margin-top: 14px;
+    }
+    .container {
+      margin: 0 auto !important;
+    }
+    #suggestion-form{
+      width: 100%;
+      
+    }
+    
+  }
+  @media(min-width: 768px){
+    .card{
+      margin: 0 15px;
+    }
+  }
+
+  @media (min-width: 992px){
+    
+  li a{
+    margin-left:2vw;
+    }
+  nav div {
+    position: absolute;
+    right: 3vw;
+  }
+  }
+  @media (max-width:991px) {
+    nav div {
+      text-align: right;
+    }
+  }
+
+  @media(min-width:768px) and (max-width: 992px) {
+    .card-body {
+      min-height: 202px;
+    }
+  }
