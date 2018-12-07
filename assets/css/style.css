@@ -19,6 +19,10 @@
   color: var(--my-yellow)
 }
 
+.navbar-toggler{
+  margin-right: 1rem;
+}
+
 span {
   color: var(--my-yellow);
 }
@@ -111,10 +115,10 @@ i:hover {
 
 @media(max-width: 992px) {
   .card-group {
-    display: inline !important;
+    display: inline ;
   }
   .card-group .card {
-    margin: 5px auto !important;
+    margin: 5px auto ;
   }
   #message {
     min-height: 150px;
@@ -132,4 +136,20 @@ i:hover {
   .card-group .card {
     margin: 20px auto !important;
   }
+}
+
+@media (max-width:430px) {
+  #project-box {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent;
+    border: none;
+  }
+  
+}
+
+@media(max-width:768px){
+  .navbar-brand { 
+    margin-left: -1rem;
+  } 
 }
