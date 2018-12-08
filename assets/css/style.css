@@ -35,7 +35,7 @@ span {
 
 .top-box {
   height: 100vh;
-  background: url(/assets/img/sunset.jpeg);
+  background: url(/assets/img/sunset.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
