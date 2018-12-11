@@ -2,6 +2,9 @@
   --my-yellow: rgb(243, 173, 21);
 }
 
+body {
+  font-family: 'Titillium Web', Arial, Helvetica, sans-serif !important;
+}
 
 .navbar {
   background-color: rgba(24, 18, 30, 0.479);
