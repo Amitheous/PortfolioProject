@@ -56,21 +56,24 @@ span {
 
 .card {
   height: 100%;
-}
-.card {
   min-width: 220px !important;
 }
 
+.card-header {
+  background-color: #A9A9A9 !important;
+}
 .card a{
   text-decoration: none;
-  color: black;
+  color: #18121E;
 }
 .card a:hover {
-  color: aqua !important;
+  color: #EFEFEF !important;
   text-decoration: none;
   transition-duration: 500ms !important;
-  text-shadow: 1px 1px  rgba(238, 255, 0, 0.719);
+  text-shadow: 1px 1px  var(--my-yellow);
 }
+
+
 
 #contact {
   background-color: #18121E;
