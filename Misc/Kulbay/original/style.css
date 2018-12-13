@@ -1,0 +1,83 @@
+:root{
+  --main: rgb(25, 38, 68);
+  --secondary: #AB987A;
+  --third: #3DCFFF;
+  --fourth: #F5F5F5;
+}
+
+body {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+  background:
+  -webkit-linear-gradient(299deg, hsla(262.66, 0%, 96.08%, 1) 12%, hsla(262.66, 0%, 96.08%, 0) 60%),
+  -webkit-linear-gradient(75deg, hsla(194.72, 100%, 61.96%, 1) 3%, hsla(194.72, 100%, 61.96%, 0) 26%),
+  -webkit-linear-gradient(157deg, hsla(36.73, 22.58%, 57.45%, 1) 50%, hsla(36.73, 22.58%, 57.45%, 0) 100%),
+  -webkit-linear-gradient(229deg, hsla(221.74, 43.4%, 10.39%, 1) 100%, hsla(221.74, 43.4%, 10.39%, 0) 70%);
+background:
+  linear-gradient(151deg, hsla(262.66, 0%, 96.08%, 1) 12%, hsla(262.66, 0%, 96.08%, 0) 60%),
+  linear-gradient(15deg, hsla(194.72, 100%, 61.96%, 1) 3%, hsla(194.72, 100%, 61.96%, 0) 26%),
+  linear-gradient(293deg, hsla(36.73, 22.58%, 57.45%, 1) 50%, hsla(36.73, 22.58%, 57.45%, 0) 100%),
+  linear-gradient(221deg, hsla(221.74, 43.4%, 10.39%, 1) 100%, hsla(221.74, 43.4%, 10.39%, 0) 70%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
+}
+
+.navbar {
+  background-color: transparent;
+  color: var(--main);
+  font-weight: 500;
+}
+
+.navbar-brand {
+  color: var(--main);
+  font-weight: 600;
+}
+.nav-link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--main);
+  float: right;
+}
+
+.nav-link:hover {
+  color: #EFEFEF;
+  transition-duration: 400ms;
+  text-shadow: 2px 2px #A9A9A9;
+}
+
+.top-box {
+  height: 100vh;
+  
+}
+
+#top-image  {
+  max-width: 260px !important;
+  margin-left: 20%;
+  margin-top: 9%;
+}
+
+#top-text {
+  text-align: center;
+  display: inline;
+  position: absolute;
+  max-width: 500px;
+  top: 27%;
+  left: 45%;
+  color: var(--main);
+}
+
+#top-text h2 {
+  font-weight: bold;
+}
+
+#top-text .btn {
+  background-color: var(--third);
+}
+
+
+@media(max-width:768px){
+  .navbar-brand { 
+    margin-left: -1rem;
+  } 
+}
