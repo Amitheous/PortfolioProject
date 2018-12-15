@@ -9,13 +9,13 @@
   <meta name="Description" content="Matthew Kartchner's web development portfolio">
   <title>Kulbay Sports | The Original</title>
   <link rel="stylesheet" href="/Misc/Kulbay/original/style.css">
-  <link rel="stylesheet" href="/Misc/Kulbay/original/bootstrap.min.css">
+  <link rel="stylesheet" href="/Misc/Kulbay/assets/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  
+
 </head>
 
 <body>
-  
+
   <div class="container-fluid px-0">
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md fixed-top">
@@ -44,55 +44,63 @@
         </ul>
       </div>
     </nav>
-    <!-- Top Box -->
-    <section class="top-box" id="top-box">
-      <img id="top-image" src="/Misc/Kulbay/original/tall-bottle.png" alt="">
-      <div  id="top-text">
-        <h2>The Original Protein Shaker</h2>
-        <h4 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi quo doloremque ipsa. Repellat nobis laborum sunt similique animi laboriosam.</h4>
-        <button class="btn mx-3 mt-4">Buy Now</button>
-        <button class="btn mx-3 mt-4">Read More</button>
-      </div>
-    </section>
+    <div class="container">
+      <!-- Top Box -->
 
-    <!-- Product Intro -->
-    <section id="intro">
-      <div class="container">
-        <div class="row">
-          <div class="col-4 mr-4">
-          <div class="card">
-              <img class="card-img" src="/Misc/Kulbay/original/original_cups.jpg" width="40%" alt="" id="about-img">
+      <section id="top-box">
+        <div class="row mt-5 pt-5">
+          <div class="col">
+            <img id="top-image" src="/Misc/Kulbay/original/tall-bottle.png" alt="">
+          </div>
+          <div class="col">
+            <div id="top-text">
+              <h2>The Original Protein Shaker</h2>
+              <h4 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum nisi quo doloremque
+                ipsa.
+                Repellat nobis laborum sunt similique animi laboriosam.</h4>
+              <button class="btn mx-3 mt-4">Buy Now</button>
+              <button class="btn mx-3 mt-4" id="read-btn">Read More</button>
+            </div>
           </div>
         </div>
-              <div class="col-7 ml-5 mt-5">
-              <div class="card">
-                <div class="card-body"><h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rem blanditiis esse accusamus, alias pariatur officia veritatis debitis omnis cupiditate eius quas natus voluptatum. Ratione?</h3></div>
+      </section>
+
+      <!-- Product Intro -->
+      <section id="intro">
+        <div class="row mt-5 pt-5 mb-5 pb-5">
+          <div class="col-4">
+            <div class="card border-0">
+              <img class="card-img" src="/Misc/Kulbay/original/original_cups.jpg" width="40%" alt="" id="about-img1">
+            </div>
+          </div>
+          <div class="col-7">
+            <div class="card" id='about-text1'>
+              <div class="card-body">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus rem blanditiis esse accusamus,
+                  alias pariatur officia veritatis debitis omnis cupiditate eius quas natus voluptatum. Ratione?</h3>
               </div>
-              </div>
+            </div>
           </div>
         </div>
-          
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About the Product -->
+      <!-- About the Product -->
 
-    <section id="about">
-      
-    </section>
+      <section id="about">
 
-    <!-- Image Gallery -->
-    <section id="gallery">
+      </section>
 
-    </section>
+      <!-- Image Gallery -->
+      <section id="gallery">
 
-    <!-- Purchase Now -->
-    <section class="contact text-light" id="purchase">
-      
-    </section>
+      </section>
 
+      <!-- Purchase Now -->
+      <section class="contact text-light" id="purchase">
 
+      </section>
+
+    </div>
   </div>
 
 
@@ -101,23 +109,23 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-  AOS.init();
-</script>
+    AOS.init();
+  </script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="/Misc/Kulbay/original/bootstrap.bundle.min.js"></script>
+  <script src="/Misc/Kulbay/assets/js/bootstrap.bundle.min.js"></script>
 
   <!-- Smooth Scrolling on anchor click -->
-<script>
-$('a[href^="#"]').on('click', function(event) {
-    var target = $(this.getAttribute('href'));
-    if( target.length ) {
+  <script>
+    $('a[href^="#"]').on('click', function (event) {
+      var target = $(this.getAttribute('href'));
+      if (target.length) {
         event.preventDefault();
         $('html, body').stop().animate({
-            scrollTop: target.offset().top
+          scrollTop: target.offset().top
         }, 1300);
-    }
-});
-</script>
+      }
+    });
+  </script>
 </body>
 
 </html>
