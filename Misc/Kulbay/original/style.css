@@ -46,24 +46,20 @@ background:
   text-shadow: 2px 2px #A9A9A9;
 }
 
-.top-box {
-  height: 100vh;
-  
+#top-box {
+  min-height: 100vh;
+  padding-top: 40px;
 }
 
 #top-image  {
   max-width: 260px !important;
-  margin-left: 20%;
-  margin-top: 9%;
+  margin-left: 80px;
+  margin-top: 100px;
 }
 
 #top-text {
+  padding-top: 100px;
   text-align: center;
-  display: inline;
-  position: absolute;
-  max-width: 500px;
-  top: 27%;
-  left: 45%;
   color: var(--main);
 }
 
@@ -73,6 +69,23 @@ background:
 
 #top-text .btn {
   background-color: var(--third);
+  color: var(--fourth);
+  font-weight: 600;
+}
+
+button#read-btn {
+  background: transparent !important;
+  border: 2px solid #3DCFFF !important;
+}
+
+#about-img1{
+  box-shadow: 9px 9px 6px 5px rgba(0, 0, 0, 0.25);
+}
+
+#about-text1 {
+  margin-left: -60px;
+  margin-top: -30px;
+  box-shadow: 9px 9px 6px 5px rgba(0, 0, 0, 0.25);
 }
 
 
