@@ -50,7 +50,7 @@ span {
 }
 
 #project-box{
-  background-color: #233237;
+  background-color: #2c444d;
 }
 .top-box-text {
   padding-top: 40vh;
@@ -78,6 +78,10 @@ span {
   text-decoration: none;
   transition-duration: 500ms !important;
   text-shadow: 1px 1px  var(--my-yellow);
+}
+
+.big-card img{
+  max-height: 415px;
 }
 
 
@@ -145,6 +149,11 @@ i:hover {
   }
   .card-group .card {
     margin: 20px auto !important;
+    padding: 0 20px !important;
+  }
+  .row {
+    margin: 0 auto !important;
+    padding: 0 auto !important;
   }
 }
 
@@ -162,4 +171,10 @@ i:hover {
   .navbar-brand { 
     margin-left: -1rem;
   } 
+}
+
+@media(min-width:1200px){
+  .row2 {
+    padding-top: 3rem;
+  }
 }
