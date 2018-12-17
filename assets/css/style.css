@@ -80,11 +80,23 @@ span {
   text-shadow: 1px 1px  var(--my-yellow);
 }
 
-.big-card img{
-  max-height: 415px;
+.small-card img{
+  max-height: 290px;
 }
 
+.small-card {
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
 
+.big-card img{
+  max-width: 700px;
+  max-height: 341px;
+}
+
+.card-img {
+  border-radius: 0px 0px 4px 4px!important;
+}
 
 #contact {
   background-color: #18121E;
