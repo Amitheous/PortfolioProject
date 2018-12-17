@@ -34,7 +34,7 @@ class UI {
     this.location.textContent = weather.name;
     this.desc.textContent =  weather.weather[0].description;
     this.temp.innerHTML = `${weather.main.temp}&#8457;`;
-    this.icon.setAttribute('src', `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
+    this.icon.setAttribute('src', `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
     this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
     this.wind.textContent = `Wind: ${weather.wind.speed}MPH`; 
   }
@@ -46,34 +46,34 @@ class UI {
     const ft1 = Math.round(forecast.list[2].main.temp);
     this.forecastTemp1.innerHTML = `${ft1}&#8457;`;
     this.forecastDesc1.textContent = forecast.list[2].weather[0].description;
-    this.forecastIcon1.setAttribute('src', `http://openweathermap.org/img/w/${forecast.list[2].weather[0].icon}.png`);
+    this.forecastIcon1.setAttribute('src', `https://openweathermap.org/img/w/${forecast.list[2].weather[0].icon}.png`);
 
 
     this.forecastDay2.innerHTML =  new Array(days[(new Date(forecast.list[10].dt_txt).getDay())], months[(new Date(forecast.list[10].dt_txt).getMonth())], (new Date(forecast.list[10].dt_txt).getDate())).toString().replace(/,/g," ");
     const ft2 = Math.round(forecast.list[10].main.temp);
     this.forecastTemp2.innerHTML = `${ft2}&#8457;`;
     this.forecastDesc2.textContent = forecast.list[10].weather[0].description;
-    this.forecastIcon2.setAttribute('src', `http://openweathermap.org/img/w/${forecast.list[10].weather[0].icon}.png`);
+    this.forecastIcon2.setAttribute('src', `https://openweathermap.org/img/w/${forecast.list[10].weather[0].icon}.png`);
 
 
     this.forecastDay3.innerHTML =  new Array(days[(new Date(forecast.list[18].dt_txt).getDay())], months[(new Date(forecast.list[18].dt_txt).getMonth())], (new Date(forecast.list[18].dt_txt).getDate())).toString().replace(/,/g," ");
     const ft3 = Math.round(forecast.list[18].main.temp);
     this.forecastTemp3.innerHTML = `${ft3}&#8457;`;
     this.forecastDesc3.textContent = forecast.list[18].weather[0].description;
-    this.forecastIcon3.setAttribute('src', `http://openweathermap.org/img/w/${forecast.list[18].weather[0].icon}.png`);
+    this.forecastIcon3.setAttribute('src', `https://openweathermap.org/img/w/${forecast.list[18].weather[0].icon}.png`);
 
 
     this.forecastDay4.innerHTML =  new Array(days[(new Date(forecast.list[26].dt_txt).getDay())], months[(new Date(forecast.list[26].dt_txt).getMonth())], (new Date(forecast.list[26].dt_txt).getDate())).toString().replace(/,/g," ");
     const ft4 = Math.round(forecast.list[26].main.temp);
     this.forecastTemp4.innerHTML = `${ft4}&#8457;`;
     this.forecastDesc4.textContent = forecast.list[26].weather[0].description;
-    this.forecastIcon4.setAttribute('src', `http://openweathermap.org/img/w/${forecast.list[26].weather[0].icon}.png`);
+    this.forecastIcon4.setAttribute('src', `https://openweathermap.org/img/w/${forecast.list[26].weather[0].icon}.png`);
 
 
     this.forecastDay5.innerHTML =  new Array(days[(new Date(forecast.list[34].dt_txt).getDay())], months[(new Date(forecast.list[34].dt_txt).getMonth())], (new Date(forecast.list[34].dt_txt).getDate())).toString().replace(/,/g," ");
     const ft5 = Math.round(forecast.list[34].main.temp);
     this.forecastTemp5.innerHTML = `${ft5}&#8457;`;
     this.forecastDesc5.textContent = forecast.list[34].weather[0].description;
-    this.forecastIcon5.setAttribute('src', `http://openweathermap.org/img/w/${forecast.list[34].weather[0].icon}.png`);
+    this.forecastIcon5.setAttribute('src', `https://openweathermap.org/img/w/${forecast.list[34].weather[0].icon}.png`);
   }
 }
