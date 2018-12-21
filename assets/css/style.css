@@ -38,7 +38,7 @@ span {
 
 .top-box {
   height: 100vh;
-  background: url(/assets/img/sunset.webp);
+  background: url(/assets/img/sunset.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
@@ -59,6 +59,7 @@ span {
 
 .project-card{
   background: transparent !important;
+  max-width: 720px !important;
 }
 
 .card {
@@ -78,20 +79,6 @@ span {
   text-decoration: none;
   transition-duration: 500ms !important;
   text-shadow: 1px 1px  var(--my-yellow);
-}
-
-.small-card img{
-  max-height: 290px;
-}
-
-.small-card {
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-}
-
-.big-card img{
-  max-width: 700px;
-  max-height: 341px;
 }
 
 .card-img {
