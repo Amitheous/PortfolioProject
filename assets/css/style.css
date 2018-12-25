@@ -1,4 +1,4 @@
-:root{
+:root {
   --my-yellow: rgb(243, 173, 21);
 }
 
@@ -15,6 +15,7 @@ body {
   color: var(--my-yellow);
   font-weight: 600;
 }
+
 .nav-link {
   font-size: 1.2rem;
   font-weight: 500;
@@ -22,7 +23,7 @@ body {
   color: var(--my-yellow)
 }
 
-.navbar-toggler{
+.navbar-toggler {
   margin-right: 1rem;
 }
 
@@ -49,15 +50,16 @@ span {
   color: #233237
 }
 
-#project-box{
+#project-box {
   background-color: #2c444d;
 }
+
 .top-box-text {
   padding-top: 40vh;
   color: white;
 }
 
-.project-card{
+.project-card {
   background: transparent !important;
   max-width: 720px !important;
 }
@@ -70,19 +72,21 @@ span {
 .card-header {
   background-color: #A9A9A9 !important;
 }
-.card a{
+
+.card a {
   text-decoration: none;
   color: #18121E;
 }
+
 .card a:hover {
   color: #EFEFEF !important;
   text-decoration: none;
   transition-duration: 500ms !important;
-  text-shadow: 1px 1px  var(--my-yellow);
+  text-shadow: 1px 1px var(--my-yellow);
 }
 
 .card-img {
-  border-radius: 0px 0px 4px 4px!important;
+  border-radius: 0px 0px 4px 4px !important;
 }
 
 #contact {
@@ -96,13 +100,16 @@ span {
 i {
   color: white;
 }
+
 i:hover {
   color: var(--my-yellow);
   transition-duration: 400ms;
 }
 
 
-#name, #email, #message{
+#name,
+#email,
+#message {
   min-width: 30vw;
   padding-left: 4px;
 }
@@ -112,15 +119,16 @@ i:hover {
 }
 
 #form-card {
-  background-color:transparent;
+  background-color: transparent;
   border: 2px solid black;
 }
 
-#form-submit{
+#form-submit {
   background-color: var(--my-yellow);
   color: #233237;
 }
-#form-submit:hover{
+
+#form-submit:hover {
   background-color: rgb(255, 174, 0);
   border: 1px solid #18121E;
   transition-duration: 200ms;
@@ -128,16 +136,20 @@ i:hover {
 
 @media(max-width: 992px) {
   .card-group {
-    display: inline ;
+    display: inline;
   }
+
   .card-group .card {
-    margin: 5px auto ;
+    margin: 5px auto;
   }
+
   #message {
     min-height: 150px;
   }
 
-  #name, #email, #message {
+  #name,
+  #email,
+  #message {
     width: 90%;
   }
 }
@@ -146,10 +158,12 @@ i:hover {
   .card-group {
     display: block !important;
   }
+
   .card-group .card {
     margin: 20px auto !important;
     padding: 0 20px !important;
   }
+
   .row {
     margin: 0 auto !important;
     padding: 0 auto !important;
@@ -163,16 +177,16 @@ i:hover {
     background-color: transparent;
     border: none;
   }
-  
+
 }
 
-@media(max-width:768px){
-  .navbar-brand { 
+@media(max-width:768px) {
+  .navbar-brand {
     margin-left: -1rem;
-  } 
+  }
 }
 
-@media(min-width:1200px){
+@media(min-width:1200px) {
   .row2 {
     padding-top: 3rem;
   }

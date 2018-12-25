@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 
 <head>
 
@@ -42,7 +42,7 @@
 
 </head>
 
-<body>
+<body id="body" class="aClass">
 
   <div class="container-fluid px-0">
     <!-- Navbar -->
@@ -87,21 +87,19 @@
               <div class="card-header text-center h5">
                 <a target="_blank" href="/pages/split.html">Split Landing</a>
               </div>
-              <a target="_blank" href="/pages/split.html"><img src="/assets/img/split.webp" class="card-img" alt="Split Landing Page"></img></a>
+              <a target="_blank" href="/pages/split.html"><img class="card-img" id="split-img" alt="Split Landing Page"></img></a>
             </div>
-
             <div class="project-card card col-md border-0 mx-auto">
               <div class="card-header text-center h5" id="something">
                 <a target="_blank" href="/pages/parallax.html">Parallax</a>
               </div>
-              <a target="_blank" href="/pages/parallax.html"><img src="/assets/img/parallax.webp" alt="" class="card-img"
-                  alt="Parallax design"></a>
+              <a target="_blank" href="/pages/parallax.html"><img class="card-img" id="parallax-img" alt="Parallax design"></a>
             </div>
             <div class="project-card card col-md border-0 mx-auto">
               <div class="card-header text-center h5">
                 <a target="_blank" href="/pages/grid.html">Grid</a>
               </div>
-              <a target="_blank" href="/pages/grid.html"><img src="/assets/img/grid.webp" alt="grid layout" class="card-img"></img></a>
+              <a target="_blank" href="/pages/grid.html"><img id="grid-img" alt="grid layout" class="card-img"></img></a>
             </div>
           </div>
 
@@ -110,21 +108,19 @@
               <div class="card-header text-center h5">
                 <a target="_blank" rel="noreferrer" href="/pages/finance.html">Finance Tools</a>
               </div>
-              <a target="_blank" rel="noreferrer" href="/pages/finance.html"><img src="/assets/img/finance.webp"
-                  class="card-img" alt="financial tools"></img></a>
+              <a target="_blank" rel="noreferrer" href="/pages/finance.html"><img id="finance-img" class="card-img" alt="financial tools"></img></a>
             </div>
             <div class="project-card card col-md border-0 mx-auto">
               <div class="card-header text-center h5">
-                <a target="_blank" rel="noreferrer" href="/pages/finance.html">Weather App</a>
+                <a target="_blank" rel="noreferrer" href="/pages/weather.html">Weather App</a>
               </div>
-              <a target="_blank" rel="noreferrer" href="/pages/weather.html"><img src="/assets/img/weather.webp" class="card-img"
-                  alt="financial tools"></img></a>
+              <a target="_blank" rel="noreferrer" href="/pages/weather.html"><img id="weather-img" class="card-img" alt="financial tools"></img></a>
             </div>
-             <div class="project-card card col-md border-0 mx-auto">
+            <div class="project-card card col-md border-0 mx-auto">
               <div class="card-header text-center h5">
                 <a target="_blank" href="/pages/translate.html">Translator</a>
               </div>
-              <a target="_blank" href="/pages/translate.html"><img src="/assets/img/translator.webp" alt="grid layout" class="card-img"></img></a>
+              <a target="_blank" href="/pages/translate.html"><img id='translate-img' alt="grid layout" class="card-img"></img></a>
             </div>
           </div>
         </div>
@@ -180,6 +176,7 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="/assets/js/modernizr-custom.js"></script>
 
   <!-- Smooth Scrolling on anchor click -->
   <script>
@@ -192,6 +189,30 @@
         }, 1300);
       }
     });
+  </script>
+
+  <script>
+    window.onload = () => {
+      var className = $('#html').attr('class');
+      console.log(className);
+      if (className == '  no-webp') {
+        console.log('not webp')
+        $('#split-img').attr('src', '/assets/img/split.png')
+        $('#parallax-img').attr('src', '/assets/img/parallax.png')
+        $('#grid-img').attr('src', '/assets/img/grid.png')
+        $('#translate-img').attr('src', '/assets/img/translator.png')
+        $('#weather-img').attr('src', '/assets/img/weather.PNG')
+        $('#finance-img').attr('src', '/assets/img/finance.png')
+      } else {
+        console.log('is webp')
+        $('#split-img').attr('src', '/assets/img/split.webp')
+        $('#parallax-img').attr('src', '/assets/img/parallax.webp')
+        $('#grid-img').attr('src', '/assets/img/grid.webp')
+        $('#translate-img').attr('src', '/assets/img/translator.webp')
+        $('#weather-img').attr('src', '/assets/img/weather.webp')
+        $('#finance-img').attr('src', '/assets/img/finance.webp')
+      }
+    }
   </script>
 
   <script src="/main.js"></script>
