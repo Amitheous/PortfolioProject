@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-
+  <link href="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css" rel="stylesheet">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
@@ -14,122 +13,171 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="mask-icon" href="/assets/icons/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="/assets/icons/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122079847-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-122079847-1');
-</script>
-  <title>Zip Weather</title>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-122079847-1');
+  </script>
+
+
+  <title>Vue Weather</title>
 </head>
-<style>
-body {
-  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
-}
 
-</style>
-<body class="bg-dark">
-  <div class="container">
-    <div class="col-md-12 mx-auto text-center bg-info mt-5 p-5 rounded text-light">
-      <h1 id="w-location" class="text-uppercase"></h1>
-      <img id="w-icon">
-      <h3 id="w-desc" class="text-capitalize"></h3>
-      <h3 id="w-temp"></h3>
-      <h3 id="w-humidity"></h3>
-      <h3 id="w-wind"></h3>
-      <br><br>
-      <div class="row mb-3">
-        <div class="card col-md-2 mx-auto px-0 text-dark rounded bg-light">
-          <div class="card-header text-dark" id="forecastDay1"></div>
-          <div class="card-body text-dark">
-            <img id="forecastIcon1">
-            <p id="forecastTemp1"></p>
-            <p class='text-capitalize' id="forecastDesc1"></p>
-          </div>
-        </div>
-        <div class="card  col-md-2 mx-auto px-0">
-          <div class="card-header text-dark" id="forecastDay2"></div>
-          <div class="card-body text-dark">
-            <img id="forecastIcon2">
-            <p id="forecastTemp2"></p>
-            <p class='text-capitalize' id="forecastDesc2"></p>
-          </div>
-        </div>
-        <div class="card col-md-2 mx-auto px-0 text-dark rounded">
-          <div class="card-header text-dark" id="forecastDay3"></div>
-          <div class="card-body text-dark">
-            <img id="forecastIcon3">
-            <p id="forecastTemp3"></p>
-            <p class='text-capitalize' id="forecastDesc3"></p>
-          </div>
-        </div>
-        <div class="card col-md-2 mx-auto px-0 text-dark rounded">
-          <div class="card-header text-dark" id="forecastDay4"></div>
-          <div class="card-body text-dark">
-            <img id="forecastIcon4">
-            <p id="forecastTemp4"></p>
-            <p class='text-capitalize' id="forecastDesc4"></p>
-          </div>
-        </div>
-        <div class="card col-md-2 mx-auto px-0 text-dark rounded">
-          <div class="card-header text-dark" id="forecastDay5"></div>
-          <div class="card-body text-dark">
-            <img id="forecastIcon5">
-            <p id="forecastTemp5"></p>
-            <p class='text-capitalize' id="forecastDesc5"></p>
-          </div>
-        </div>
-      </div>
-      <button type="button" class="btn btn-lg btn-info border-primary rounded text-light border-light" data-toggle="modal"
-        data-target="#locModal">
-        Change Location
-      </button>
-    </div>
+
+<body>
+  <div id="app">
+    <v-app class="light-blue lighten-3">
+      <v-content>
+        <v-container fluid>
+          <v-layout align-center justify-center row fill-height>
+            <v-flex xs12 sm6 md3>
+              <v-text-field label="Zip Code" v-model="zip" />
+            </v-flex>
+            <v-btn color="error" @click="getWeather">Get Forecast</v-btn>
+          </v-layout>
+
+          <!-- Current Weather -->
+          <v-layout align-center justify-center row fill-height v-if="city">
+
+            <v-card class="green accent-2">
+              <v-card-title class="my-0 pb-0 mb-0" style="justify-content:center">
+                <h1>{{ city }}</h1>
+              </v-card-title>
+              <v-card-text class="text-xs-center pt-0 pb-0 mt-0">
+                <img v-bind:src="icon">
+              </v-card-text>
+              <v-divider></v-divider>
+              <v-layout row justify-center align-center fill-height>
+                <v-card-text class="mx-3 px-auto" v-for="thing of things">
+                  <h3>{{ thing.value }}{{ thing.type }} </h3>
+                </v-card-text>
+              </v-layout>
+
+            </v-card>
+          </v-layout>
+
+          <!-- 5 Day Forecast -->
+          <v-layout v-if="city" id="forecast">
+            <v-flex v-for="day of forecastDays">
+              <v-card class="mt-3 green accent-2">
+                <v-card-title style="justify-content: center">
+                  <h2>{{day.date}}</h2>
+                </v-card-title>
+                <v-card-text class="text-xs-center pt-0 pb-0">
+                  <img v-bind:src="day.icon">
+                </v-card-text>
+                <v-divider></v-divider>
+                <v-card-text class="text-xs-center">
+                  <h3>{{day.temp}}F</h3>
+                  <h3>{{day.desc}}</h3>
+                </v-card-text>
+              </v-card>
+            </v-flex>
+          </v-layout>
+        </v-container>
+        <footer class="text-xs-center" id="footer">Powered by Vue.js and <a href="https://openweathermap.org/">Openweather</a><br>Matthew
+          Kartchner &copy;2018</footer>
+      </v-content>
+    </v-app>
   </div>
-
-  </div>
-
-
-  <!-- Modal -->
-  <div class="modal fade" id="locModal" tabindex="-1" role="dialog" aria-labelledby="locModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="locModalLabel">Choose Location</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <form id="w-form">
-            <div class="form-group">
-              <label for="zip">Zip Code</label>
-              <input type="text" id="zip" class="form-control">
-            </div>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button id="w-change-btn" type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer class="text-center text-uppercase small py-3 text-light" id="footer">Matthew Kartchner &copy;2018</footer>
-
-
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="/assets/js/bootstrap.bundle.min.js"></script>
-
-  <script src="./weather/storage.js"></script>
-  <script src="./weather/weather.js"></script>
-  <script src="./weather/ui.js"></script>
-  <script src="./weather/app.js"></script>
 </body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  let app = new Vue({
+    el: '#app',
+    data: {
+      zip: '',
+      apiKey: '304fdfd3359963ec37c38ac63b371eec',
+      humidity: '',
+      desc: '',
+      city: '',
+      icon: '#',
+      temp: '',
+      things: [],
+      forecastDays: [],
+    },
+    computed: {},
+    methods: {
+      getWeather() {
+        function capitalizeEachWord(str) {
+          return str.replace(/\w\S*/g, function (txt) {
+            return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+          });
+        }
+        this.things = []
+        this.forecastDays = []
+        // Function to get the current weather
+        axios.get(
+            `https://api.openweathermap.org/data/2.5/weather?zip=${this.zip},us&units=imperial&APPID=${this.apiKey}`
+          )
+          .then(response => {
+            const data = response.data
+            this.things.push({
+              value: Math.round(data.main.temp),
+              type: "F"
+            })
+            this.things.push({
+              value: data.main.humidity,
+              type: '% Humidity'
+            })
+            this.things.push({
+              value: capitalizeEachWord(data.weather[0].description)
+            })
+            this.city = data.name
+            this.icon = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`
+          })
+          .catch(err => {
+            console.log('Failed to get weather info from api: ', err);
+          })
+
+        // Function to get forecast weather
+        axios.get(
+            `https://api.openweathermap.org/data/2.5/forecast?zip=${this.zip},us&units=imperial&APPID=${this.apiKey}`
+          )
+          .then(response => {
+            // Array values correspond with values within the JSON file to get oen temperature from the same time for each day
+            var forecastArray = [0, 8, 16, 24, 32]
+            const forecastList = response.data.list
+            for (var i = 0; i < 5; i++) {
+              var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+              this.forecastDays.push({
+                // Gets the value for the day of the week and converts it to the corresponding string
+                date: days[(new Date(forecastList[forecastArray[i]].dt_txt).getDay())],
+                temp: Math.round(forecastList[forecastArray[i]].main.temp),
+                icon: `https://openweathermap.org/img/w/${forecastList[forecastArray[i]].weather[0].icon}.png`,
+                desc: capitalizeEachWord(forecastList[forecastArray[i]].weather[0].description)
+              })
+            }
+          })
+      }
+    },
+  })
+</script>
+
+<style>
+  footer {
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  @media(max-width:768px) {
+    #forecast {
+      display: block;
+    }
+  }
+</style>
+
+
 
 </html>
