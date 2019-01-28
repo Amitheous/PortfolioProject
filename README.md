@@ -1,5 +1,8 @@
-#Portfolio Project
+# Portfolio Project
 
-Trying to put together some of the things I've been working on.
+A place to put things that I have worked on together in one place to showcase.
 
-Viewable live at techtimeless.com
+# What I Learned
+
+* The importance of folder and file organization, especially when something grows beyond a single page
+* Web optimization (Page load times, browser compatibility, etc)
